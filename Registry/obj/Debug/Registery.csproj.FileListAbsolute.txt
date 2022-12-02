@@ -1,0 +1,92 @@
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\Попытка 1.exe.config
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\Попытка 1.exe
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\Попытка 1.pdb
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\ControlzEx.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\DAL.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\EntityFramework.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\EPPlus.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\MahApps.Metro.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\MaterialDesignColors.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\MaterialDesignThemes.MahApps.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\MigraDoc.DocumentObjectModel-gdi.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\MigraDoc.Rendering-gdi.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\MigraDoc.RtfRendering-gdi.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\PdfSharp-gdi.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\PdfSharp.Charting-gdi.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\DAL.pdb
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\DAL.dll.config
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\ControlzEx.pdb
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\ControlzEx.xml
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\EntityFramework.xml
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\EPPlus.xml
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\MahApps.Metro.pdb
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\MahApps.Metro.xml
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\MaterialDesignColors.pdb
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\MaterialDesignThemes.MahApps.pdb
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\MigraDoc.DocumentObjectModel-gdi.xml
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\MigraDoc.Rendering-gdi.xml
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\MigraDoc.RtfRendering-gdi.xml
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\PdfSharp-gdi.xml
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\PdfSharp.Charting-gdi.xml
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\de\MigraDoc.DocumentObjectModel-gdi.resources.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\de\MigraDoc.Rendering-gdi.resources.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\de\MigraDoc.RtfRendering-gdi.resources.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\de\PdfSharp-gdi.resources.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\bin\Debug\de\PdfSharp.Charting-gdi.resources.dll
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\Registery.csproj.AssemblyReference.cache
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\Changing.g.cs
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\DoctorMain.g.cs
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\DoctorRecordln.g.cs
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\Doctors.g.cs
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\DoctorSees.g.cs
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\MainWindow.g.cs
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\Nurces.g.cs
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\PatientCard.g.cs
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\Patients.g.cs
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\Procedural.g.cs
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\ProcedureRecord.g.cs
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\ProcedureRegistration.g.cs
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\ProcSchedule.g.cs
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\Registration.g.cs
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\RegistrationMain.g.cs
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\Schedule.g.cs
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\App.g.cs
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\Попытка 1_MarkupCompile.cache
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\Попытка 1_MarkupCompile.lref
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\App.baml
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\Changing.baml
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\DoctorMain.baml
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\DoctorRecordln.baml
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\Doctors.baml
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\DoctorSees.baml
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\MainWindow.baml
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\Nurces.baml
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\PatientCard.baml
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\Patients.baml
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\Procedural.baml
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\ProcedureRecord.baml
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\ProcedureRegistration.baml
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\ProcSchedule.baml
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\Registration.baml
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\RegistrationMain.baml
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\View\Schedule.baml
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\Попытка 1.g.resources
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\Попытка_1.Properties.Resources.resources
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\Registery.csproj.GenerateResource.cache
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\Registery.csproj.CoreCompileInputs.cache
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\Registery.csproj.CopyComplete
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\Попытка 1.exe
+C:\Users\ivans\Desktop\-1\Попытка 1\obj\Debug\Попытка 1.pdb

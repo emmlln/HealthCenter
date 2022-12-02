@@ -1,0 +1,53 @@
+﻿<Window x:Class="Registry.View.PatientCard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Registry.View"
+        mc:Ignorable="d"
+        Title="PatientCard" Height="450" Width="800">
+    <Grid Background="#FFCFFBC8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.8*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="1" Fill="#FF02AE87"/>
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <TextBlock FontSize="24" Text="Пациент:" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox IsEditable="True"  StaysOpenOnEdit="True" FontSize="24" ItemsSource="{Binding Patients}" SelectedItem="{Binding CurrentPatient}" DisplayMemberPath="FullName" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200"/>
+        </StackPanel>
+
+        <TextBox IsReadOnly="True" Text="{Binding CardText, UpdateSourceTrigger=PropertyChanged}" FontSize="16" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="5" Margin="8" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible"/>
+        <StackPanel Grid.Column="3" Grid.Row="1" Grid.RowSpan="4" IsEnabled="{Binding Visibility}">
+            <StackPanel Orientation="Horizontal" Margin="8">
+                <CheckBox IsChecked="{Binding ByDate}"/>
+                <TextBlock Text="По дате" FontSize="18"/>
+            </StackPanel>
+            <TextBlock Text="C" FontSize="18" Margin="8"/>
+            <DatePicker FontSize="18" Margin="8" IsEnabled="{Binding ByDate}" SelectedDate="{Binding StartDate}"/>
+            <TextBlock Text="По" FontSize="18" Margin="8"/>
+            <DatePicker FontSize="18" Margin="8" IsEnabled="{Binding ByDate}" SelectedDate="{Binding EndDate}"/>
+        </StackPanel>
+        <Viewbox Grid.Row="5" Grid.Column="3">
+            <StackPanel Orientation="Horizontal" >
+                <Button Command="{Binding Back}" Content="Назад" Background="#FF1A95EB" BorderBrush="#FFF0E4CC" Margin="0,0,8,0"/>
+                <Button Command="{Binding Show}" Content="Вывести" Background="#FF1A95EB" BorderBrush="#FFF0E4CC"/>
+                <Button Command="{Binding Print}" Height="Auto" Background="#FF1A95EB" Padding="0" Margin="8,0,8,0" BorderBrush="#FFF0E4CC">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Печать" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Padding="2"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Viewbox>
+    </Grid>
+</Window>

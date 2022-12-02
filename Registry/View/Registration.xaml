@@ -1,0 +1,91 @@
+﻿<Window x:Class="Registry.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Registry"
+        mc:Ignorable="d"
+
+    Title="Запись к врачу" Height="450" Width="900" MinWidth="900" MinHeight="450"  MaxHeight="500" MaxWidth="1000">
+    <Grid Background="#FFCFFBC8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.8*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="1" Fill="#FF02AE87"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="4">
+            <TextBlock Text="ФИО пациента" HorizontalAlignment="Center" FontSize="24"/>
+            <ComboBox Width="200" IsEditable="True"  StaysOpenOnEdit="True" Margin="8" FontSize="18" ItemsSource="{Binding Patients}" SelectedItem="{Binding SelectedPatient}" DisplayMemberPath="FullName"/>
+        </StackPanel>
+        <Viewbox Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2" Margin="4">
+            <Calendar  SelectedDate="{Binding SelectedDate}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{x:Null}" VerticalAlignment="Center">
+                <Calendar.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFE4EAF0" Offset="0"/>
+                        <GradientStop Color="#FFECF0F4" Offset="0.16"/>
+                        <GradientStop Color="#FFFCFCFD" Offset="0.16"/>
+                        <GradientStop Color="#FFF0E2C4" Offset="1"/>
+                    </LinearGradientBrush>
+                </Calendar.Background>
+                <Calendar.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                        <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                        <GradientStop Color="#FF718597" Offset="0.375"/>
+                        <GradientStop Color="#FFDCC88B" Offset="1"/>
+                    </LinearGradientBrush>
+                </Calendar.BorderBrush>
+            </Calendar>
+        </Viewbox>
+        <Viewbox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
+            <StackPanel Orientation="Horizontal">
+                <Button Command="{Binding Submit}" Content="Отправить" FontSize="24"  Height="Auto" Margin="8" Background="#FF1A95EB" Padding="4" BorderBrush="#FFF0E4CC" Grid.ColumnSpan="2" >
+                </Button>
+                <Button Command="{Binding Main}" FontSize="24" Content="Назад"  Grid.ColumnSpan="2" Height="Auto" Margin="8" Background="#FF1A95EB" Padding="4"  BorderBrush="#FFF0E4CC" />
+            </StackPanel>
+        </Viewbox>
+        
+        <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Внимание" FontSize="20" HorizontalAlignment="Center" Foreground="#FFF10000"/>
+            <TextBlock Text="Запись не более чем на" FontSize="20" Foreground="#FFF10000"/>
+            <TextBlock Text="14 дней вперед!" FontSize="20" HorizontalAlignment="Center" Foreground="#FFF10000"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="4">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <StackPanel Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="8">
+                    <TextBlock Text="Участок номер:" HorizontalAlignment="Center" FontSize="24"/>
+                    <TextBlock Text="{Binding SelectedPatient.PlaceOfSee}" HorizontalAlignment="Center" FontSize="24"/>
+                </StackPanel>
+                <StackPanel Margin="8">
+                    <TextBlock Text="ФИО врача:" HorizontalAlignment="Center" FontSize="24"/>
+                    <TextBlock Width="200" Text="{Binding Doctor.FullName}" HorizontalAlignment="Center" FontSize="24"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Grid.Row="5" Grid.Column="5" Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="8">
+                    <TextBlock Text="Доступные дни:" HorizontalAlignment="Center" FontSize="24"/>
+                    <TextBlock Width="200" Text="{Binding Days}" HorizontalAlignment="Center" FontSize="24"/>
+                </StackPanel>
+                <StackPanel Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="8" VerticalAlignment="Center">
+                    <TextBlock Text="Время начала" HorizontalAlignment="Center" FontSize="24"/>
+                    <ComboBox IsEditable="True"  StaysOpenOnEdit="True" Margin="8" FontSize="18" ItemsSource="{Binding Times}" SelectedIndex="{Binding SelectedTime}" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="8">
+                <TextBlock Text="Специальность врача" HorizontalAlignment="Center" FontSize="24"/>
+                <ComboBox IsEditable="True"  StaysOpenOnEdit="True" Margin="10,6" FontSize="18" ItemsSource="{Binding Specializations}" SelectedItem="{Binding SelectedSpecialization}" DisplayMemberPath="SpecializationName" />
+            </StackPanel>
+        </StackPanel>
+        
+       </Grid>
+</Window>

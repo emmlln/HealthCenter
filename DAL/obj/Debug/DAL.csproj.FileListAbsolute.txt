@@ -1,0 +1,56 @@
+C:\Users\ivans\Desktop\Новая папка (2)\-1\DAL\bin\Debug\DAL.dll.config
+C:\Users\ivans\Desktop\Новая папка (2)\-1\DAL\bin\Debug\DAL.dll
+C:\Users\ivans\Desktop\Новая папка (2)\-1\DAL\bin\Debug\DAL.pdb
+C:\Users\ivans\Desktop\Новая папка (2)\-1\DAL\bin\Debug\EntityFramework.dll
+C:\Users\ivans\Desktop\Новая папка (2)\-1\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ivans\Desktop\Новая папка (2)\-1\DAL\bin\Debug\EntityFramework.xml
+C:\Users\ivans\Desktop\Новая папка (2)\-1\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ivans\Desktop\Новая папка (2)\-1\DAL\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\ivans\Desktop\Новая папка (2)\-1\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\ivans\Desktop\Новая папка (2)\-1\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\ivans\Desktop\Новая папка (2)\-1\DAL\obj\Debug\DAL.dll
+C:\Users\ivans\Desktop\Новая папка (2)\-1\DAL\obj\Debug\DAL.pdb
+C:\Users\ivans\Desktop\Новая папка (2)\-1\DAL\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\ivans\Desktop\Новая папка (2)\-1\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\ivans\Desktop\-1\DAL\bin\Debug\DAL.dll.config
+C:\Users\ivans\Desktop\-1\DAL\bin\Debug\DAL.dll
+C:\Users\ivans\Desktop\-1\DAL\bin\Debug\DAL.pdb
+C:\Users\ivans\Desktop\-1\DAL\bin\Debug\EntityFramework.dll
+C:\Users\ivans\Desktop\-1\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ivans\Desktop\-1\DAL\bin\Debug\EntityFramework.xml
+C:\Users\ivans\Desktop\-1\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ivans\Desktop\-1\DAL\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\ivans\Desktop\-1\DAL\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\ivans\Desktop\-1\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\ivans\Desktop\-1\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\ivans\Desktop\-1\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\ivans\Desktop\-1\DAL\obj\Debug\DAL.dll
+C:\Users\ivans\Desktop\-1\DAL\obj\Debug\DAL.pdb
+C:\Users\ivans\Desktop\Курсовая\DAL\bin\Debug\DAL.dll.config
+C:\Users\ivans\Desktop\Курсовая\DAL\bin\Debug\DAL.dll
+C:\Users\ivans\Desktop\Курсовая\DAL\bin\Debug\DAL.pdb
+C:\Users\ivans\Desktop\Курсовая\DAL\bin\Debug\EntityFramework.dll
+C:\Users\ivans\Desktop\Курсовая\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ivans\Desktop\Курсовая\DAL\bin\Debug\EntityFramework.xml
+C:\Users\ivans\Desktop\Курсовая\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ivans\Desktop\Курсовая\DAL\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\ivans\Desktop\Курсовая\DAL\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\ivans\Desktop\Курсовая\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\ivans\Desktop\Курсовая\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\ivans\Desktop\Курсовая\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\ivans\Desktop\Курсовая\DAL\obj\Debug\DAL.dll
+C:\Users\ivans\Desktop\Курсовая\DAL\obj\Debug\DAL.pdb
+C:\Users\840\Desktop\ISPU\5 семестр\Конструирование ПО (Фомина)\Курсовая\DAL\bin\Debug\DAL.dll.config
+C:\Users\840\Desktop\ISPU\5 семестр\Конструирование ПО (Фомина)\Курсовая\DAL\bin\Debug\DAL.dll
+C:\Users\840\Desktop\ISPU\5 семестр\Конструирование ПО (Фомина)\Курсовая\DAL\bin\Debug\DAL.pdb
+C:\Users\840\Desktop\ISPU\5 семестр\Конструирование ПО (Фомина)\Курсовая\DAL\bin\Debug\EntityFramework.dll
+C:\Users\840\Desktop\ISPU\5 семестр\Конструирование ПО (Фомина)\Курсовая\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\840\Desktop\ISPU\5 семестр\Конструирование ПО (Фомина)\Курсовая\DAL\bin\Debug\EntityFramework.xml
+C:\Users\840\Desktop\ISPU\5 семестр\Конструирование ПО (Фомина)\Курсовая\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\840\Desktop\ISPU\5 семестр\Конструирование ПО (Фомина)\Курсовая\DAL\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\840\Desktop\ISPU\5 семестр\Конструирование ПО (Фомина)\Курсовая\DAL\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\840\Desktop\ISPU\5 семестр\Конструирование ПО (Фомина)\Курсовая\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\840\Desktop\ISPU\5 семестр\Конструирование ПО (Фомина)\Курсовая\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\840\Desktop\ISPU\5 семестр\Конструирование ПО (Фомина)\Курсовая\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\840\Desktop\ISPU\5 семестр\Конструирование ПО (Фомина)\Курсовая\DAL\obj\Debug\DAL.dll
+C:\Users\840\Desktop\ISPU\5 семестр\Конструирование ПО (Фомина)\Курсовая\DAL\obj\Debug\DAL.pdb

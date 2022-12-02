@@ -1,0 +1,80 @@
+﻿<Window x:Class="Registry.View.Procedural"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Registry.View"
+        mc:Ignorable="d"
+        Title="Procedural" Height="450" Width="800">
+    <Grid Background="#FFCFFBC8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Button Command="{Binding Write}" Grid.Column="1" Grid.Row="3" Height="Auto" Margin="8" Background="#FF1A95EB" Padding="0" BorderBrush="#FFF0E4CC" Grid.ColumnSpan="1" >
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Заполнить результаты" FontSize="20
+                           " HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+            </StackPanel>
+        </Button>
+        <Button Command="{Binding Exit}" Grid.Column="0" Grid.Row="3" Height="Auto" Margin="8,8,8.2,8" Background="#FF1A95EB" Padding="0" BorderBrush="#FFF0E4CC" Grid.ColumnSpan="1" >
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Выйти из аккаута" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+            </StackPanel>
+        </Button>
+        <Button Command="{Binding NotVisited}" Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="3" Height="Auto" Background="#FF1A95EB" Padding="0" Margin="64,8" BorderBrush="#FFF0E4CC">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Не пришел" FontSize="20
+                           " HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+            </StackPanel>
+        </Button>
+        <ListBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="8"
+            ItemsSource="{Binding Procedures}" SelectedItem="{Binding SelectedProcedure}" VirtualizingPanel.ScrollUnit="Pixel"
+            ScrollViewer.VerticalScrollBarVisibility="Auto" 
+            ScrollViewer.HorizontalScrollBarVisibility="Auto" HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="4" HorizontalAlignment="Stretch" VerticalAlignment="Center" Orientation="Vertical" >
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="24" Text="ФИО: "/>
+                            <TextBlock FontSize="24" Text="{Binding Path=FIO}" TextWrapping="Wrap" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="24" Text="Процедура: "/>
+                            <TextBlock FontSize="24" Text="{Binding Path=ProcedureType}" TextWrapping="Wrap" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="24" Text="Дата: "/>
+                            <TextBlock FontSize="24" Text="{Binding Path=Date}" TextWrapping="Wrap" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Rectangle Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="1" Fill="#FF02AE87"/>
+        <Viewbox Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Margin="4">
+                    <TextBlock Text="Выбранный пациент:" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+                    <TextBlock Text="{Binding SelectedProcedure.FIO}" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </StackPanel>
+                <StackPanel Margin="4">
+                    <TextBlock Text="  Дата и время:   " FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock Text="{Binding SelectedProcedure.Date}" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Margin="4">
+                    <TextBlock Text="    Процедура:    " FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock Text="{Binding SelectedProcedure.ProcedureType}" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+            </StackPanel>
+        </Viewbox>
+    </Grid>
+</Window>

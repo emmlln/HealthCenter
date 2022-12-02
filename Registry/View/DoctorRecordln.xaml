@@ -1,0 +1,81 @@
+﻿<Window x:Class="Registry.View.DoctorRecordln"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Registry.View"
+        mc:Ignorable="d"
+        Title="DoctorRecordln" Height="450" Width="800">
+    <Grid Background="#FFCFFBC8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.8*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="1" Fill="#FF02AE87"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="4">
+            <TextBlock Text="Диагноз:" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox Width="200" Text="{Binding Record.Diagnosis, UpdateSourceTrigger=PropertyChanged}" FontSize="22" Margin="8,2"/>
+        </StackPanel>
+        <ListBox Grid.Row="5" Grid.RowSpan="3" Margin="6"
+            ItemsSource="{Binding Medicaments}" SelectedItem="{Binding SelectedMedicament}" VirtualizingPanel.ScrollUnit="Pixel"
+            ScrollViewer.VerticalScrollBarVisibility="Auto" 
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="4" HorizontalAlignment="Stretch" VerticalAlignment="Center" Orientation="Vertical" >
+                        <TextBlock FontSize="14" Text="{Binding Path=Medicine}" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Command="{Binding Exit}" Grid.Column="0" Grid.Row="8" Height="Auto" Margin="8,8,8.2,8" Background="#FF1A95EB" Padding="0" BorderBrush="#FFF0E4CC" Grid.ColumnSpan="1" >
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Назад" FontSize="20
+                           " HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+            </StackPanel>
+        </Button>
+        <Button Command="{Binding Submit}" Grid.Column="1" Grid.Row="8" Height="Auto" Background="#FF1A95EB" Padding="0" Margin="8,8" BorderBrush="#FFF0E4CC">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Сохранить" FontSize="20
+                           " HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+            </StackPanel>
+        </Button>
+        <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1" Text="{Binding FIO}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White" FontWeight="Bold" TextWrapping="Wrap"/>
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="4">
+            <TextBlock FontSize="18" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" Text="Результаты осмотра:" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+            <TextBox Height="250" Text="{Binding Record.Result, UpdateSourceTrigger=PropertyChanged}" Style="{x:Null}" Grid.Row="2" Grid.Column="1" Grid.RowSpan="6" Grid.ColumnSpan="4" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Margin="4"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" Margin="8">
+            <TextBlock FontSize="18" Grid.Column="5" Grid.Row="1" Grid.ColumnSpan="3" Text="Процедуры:" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+            <ComboBox Style="{x:Null}" IsEditable="True"  StaysOpenOnEdit="True" Margin="2" FontSize="16" ItemsSource="{Binding AllProcedures}" SelectedItem="{Binding CurrentProcedure}" DisplayMemberPath="Type"/>
+            <Viewbox Margin="3">
+                <StackPanel Orientation="Horizontal">
+                    <Button Command="{Binding PAdd}" Content="Добавить" Margin="8,4" Background="#FF1A95EB" Padding="6,0" BorderBrush="#FFF0E4CC"/>
+                    <Button Command="{Binding PRemove}" Content="Удалить" Margin="8,4" Background="#FF1A95EB" Padding="6,0" BorderBrush="#FFF0E4CC"/>
+                </StackPanel>
+            </Viewbox>
+        </StackPanel>
+        <ListBox Grid.Row="3" Grid.Column="3" Grid.RowSpan="3" Margin="4"
+            ItemsSource="{Binding Procedures}" SelectedItem="{Binding SelectedProcedure}" VirtualizingPanel.ScrollUnit="Pixel"
+            ScrollViewer.VerticalScrollBarVisibility="Auto" 
+            ScrollViewer.HorizontalScrollBarVisibility="Auto" HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="4" HorizontalAlignment="Stretch" VerticalAlignment="Center" Orientation="Vertical" >
+                        <TextBlock FontSize="14" Text="{Binding Path=Type}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>

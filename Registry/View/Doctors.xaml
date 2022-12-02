@@ -1,0 +1,101 @@
+﻿<Window x:Class="Registry.View.Doctors"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Registry.View"
+        mc:Ignorable="d"
+        Title="Doctors" Height="450" Width="800">
+    <Grid Background="#FFCFFBC8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.8*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="1" Fill="#FF02AE87"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="4">
+            <TextBlock Text="Выбранный врач:" HorizontalAlignment="Center" FontSize="18" />
+            <TextBox Text="{Binding FIO, UpdateSourceTrigger=PropertyChanged}" Margin="8,0" FontSize="18" Width="250"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="1" Grid.RowSpan="3" Margin="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Сертификат:" Margin="8,0" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <ComboBox SelectedIndex="{Binding SelectedCertificate}" Width="100" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Есть"/>
+                    <TextBlock Text="Нет"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Категория:" Margin="8,0" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <ComboBox ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategory}" Width="115" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" DisplayMemberPath="Category"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Участок:" Margin="8,0" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <ComboBox ItemsSource="{Binding Places}" SelectedIndex="{Binding SelectedPlace}" Width="60" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Специализация:" Margin="8,0" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <ComboBox ItemsSource="{Binding Specializations}" Width="140" SelectedItem="{Binding SelectedSpecialization}" FontSize="18" Margin="8" DisplayMemberPath="SpecializationName"/>
+            </StackPanel>
+            <TextBlock Text="Смена расписания с:" Margin="8,0" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Text="{Binding ChangingDoctor.FullName}" Margin="8,0" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="3" Grid.Row="4" Grid.RowSpan="2" Background="#FF8EFFB2">
+            <TextBlock Margin="2" Text="Фильтры:"  FontFamily="Toledo Heavy" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Margin="2" Text="Участок"  FontFamily="Toledo Heavy" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <ComboBox ItemsSource="{Binding NPlaces}" SelectedIndex="{Binding CurrentPlace}" Grid.Row="0" Grid.Column="6" IsEditable="True"  StaysOpenOnEdit="True" Margin="8, 2" FontSize="16" VerticalAlignment="Center" />
+            <TextBlock Margin="2" Text="Специализация"  FontFamily="Toledo Heavy" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <ComboBox ItemsSource="{Binding NSpecializations}" SelectedIndex="{Binding CurrentSpecialization}" Grid.Row="0" Grid.Column="6" IsEditable="True"  StaysOpenOnEdit="True" Margin="8, 2" FontSize="16" VerticalAlignment="Center" DisplayMemberPath="SpecializationName"/>
+        </StackPanel>
+        <StackPanel Grid.Column="6" Grid.ColumnSpan="2">
+            </StackPanel>
+        <Viewbox  Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3">
+            <StackPanel Orientation="Horizontal">
+                <Button Command="{Binding Exit}" Content="В меню" FontSize="24"  Height="Auto" Margin="4" Background="#FF1A95EB" BorderBrush="#FFF0E4CC" Grid.ColumnSpan="2" />
+                <Button Command="{Binding Create}" Content="Добавить" FontSize="24"  Height="Auto" Margin="4" Background="#FF1A95EB" BorderBrush="#FFF0E4CC" Grid.ColumnSpan="2" />
+                <Button Command="{Binding Update}" FontSize="24" Content="Сохранить"  Grid.ColumnSpan="2" Height="Auto" Margin="4" Background="#FF1A95EB"  BorderBrush="#FFF0E4CC" />
+            </StackPanel>
+        </Viewbox>
+        <ListBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="4" Margin="8"
+            ItemsSource="{Binding Doctors}" SelectedItem="{Binding SelectedDoctor}" VirtualizingPanel.ScrollUnit="Pixel"
+            ScrollViewer.VerticalScrollBarVisibility="Auto" 
+            ScrollViewer.HorizontalScrollBarVisibility="Auto" HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock FontSize="24" Text="{Binding Path=FullName}" TextWrapping="Wrap" VerticalAlignment="Center"/>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="24" Text="Участок: " TextWrapping="Wrap" VerticalAlignment="Center"/>
+                            <TextBlock FontSize="24" Text="{Binding Path=PlaceOfSee}" TextWrapping="Wrap" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <TextBlock FontSize="24" Text="{Binding Path=Specialization}" TextWrapping="Wrap" VerticalAlignment="Center"/>
+                        <TextBlock FontSize="24" TextWrapping="Wrap">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Closed}" Value="true">
+                                            <Setter Property="Text" Value="Удален"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Path=Closed}" Value="false">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>

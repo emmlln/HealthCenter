@@ -1,0 +1,105 @@
+﻿<Window x:Class="Registry.View.Changing"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Registry.View"
+        mc:Ignorable="d"
+        Title="Changing" Height="450" Width="800">
+    <Grid Background="#FFCFFBC8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition Height="0.8*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="1" Fill="#FF02AE87"/>
+        <Viewbox Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Замена с:" Margin="4"/>
+                <DatePicker SelectedDate="{Binding StartDate}" Width="80" Margin="2"/>
+                <TextBlock Text="Замена до:" Margin="4"/>
+                <DatePicker SelectedDate="{Binding EndDate}" Width="80" Margin="2"/>
+            </StackPanel>
+        </Viewbox>
+        <Viewbox Grid.Row="1" Grid.ColumnSpan="2" Margin="2">
+            <StackPanel>
+                <TextBlock Text="Выберите заменяемого врача:"/>
+                <ComboBox IsEditable="True"  StaysOpenOnEdit="True" FontSize="18" ItemsSource="{Binding Doctors}" SelectedItem="{Binding SelectedDoctor}" DisplayMemberPath="FullName"/>
+            </StackPanel>
+        </Viewbox>
+        <Viewbox Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Margin="2">
+            <StackPanel>
+                <TextBlock Text="Выберите заменяющего врача:"/>
+                <ComboBox IsEditable="True"  StaysOpenOnEdit="True" FontSize="18" ItemsSource="{Binding Cdoctors}" SelectedItem="{Binding SelectedCDoctor}" DisplayMemberPath="FullName"/>
+            </StackPanel>
+        </Viewbox>
+        <ListBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2"
+            ItemsSource="{Binding Changings}" VirtualizingPanel.ScrollUnit="Pixel" Margin="8"
+            ScrollViewer.VerticalScrollBarVisibility="Auto" 
+            ScrollViewer.HorizontalScrollBarVisibility="Auto" HorizontalContentAlignment="Stretch" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="4" HorizontalAlignment="Stretch" VerticalAlignment="Center" Orientation="Vertical" >
+                        <TextBlock FontSize="28" Text="{Binding Path=Day}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="24" Text="Смена - " />
+                            <TextBlock FontSize="24" Text="{Binding Path=Shift}"/>
+                        </StackPanel>
+                        <TextBlock FontSize="24" Text="{Binding Path=Time}" TextWrapping="Wrap" VerticalAlignment="Center">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Free}" Value="false">
+                                            <Setter Property="Foreground" Value="Red"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                        <TextBlock Text="{Binding Path=Changing}" FontSize="20"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2"
+            ItemsSource="{Binding ChangingsRight}" VirtualizingPanel.ScrollUnit="Pixel" Margin="8"
+            ScrollViewer.VerticalScrollBarVisibility="Auto" 
+            ScrollViewer.HorizontalScrollBarVisibility="Auto" HorizontalContentAlignment="Stretch" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="4" HorizontalAlignment="Stretch" VerticalAlignment="Center" Orientation="Vertical" >
+                        <TextBlock FontSize="28" Text="{Binding Path=Day}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="24" Text="Смена - " />
+                            <TextBlock FontSize="24" Text="{Binding Path=Shift}"/>
+                        </StackPanel>
+                        <TextBlock FontSize="24" Text="{Binding Path=Time}" TextWrapping="Wrap" VerticalAlignment="Center">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Free}" Value="false">
+                                            <Setter Property="Foreground" Value="Red"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                        <TextBlock Text="{Binding Path=Changing}" FontSize="20"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Command="{Binding Submit}" Grid.Column="0" Grid.Row="8" Content="Принять" FontSize="24"  Height="Auto" Margin="8,8,8,8" Background="#FF1A95EB" Padding="-4" BorderBrush="#FFF0E4CC"/>
+        <Button Command="{Binding Exit}" Grid.Column="3" Grid.ColumnSpan="1" Grid.Row="8" Content="На главную" FontSize="24"  Height="Auto" Margin="8,8,8,8" Background="#FF1A95EB" Padding="-4" BorderBrush="#FFF0E4CC"/>
+        <Button Command="{Binding Cancel}" Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="8" Content="Отменить" FontSize="24"  Height="Auto" Margin="8,8,8,8" Background="#FF1A95EB" Padding="-4" BorderBrush="#FFF0E4CC"/>
+    </Grid>
+</Window>

@@ -1,0 +1,87 @@
+﻿<Window x:Class="Registry.RegistrationMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Registry"
+        mc:Ignorable="d"
+        Title="Регистратура" Height="450" Width="800">
+    <Grid Background="#FFCFFBC8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Button Background="#FFB61DA8" Command="{Binding Patients}" Grid.Column="1" Grid.Row="1" Height="Auto" Margin="8,4"  Padding="0" BorderBrush="#FFF0E4CC" Grid.ColumnSpan="1" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Список пациентов" FontSize="20
+                           " HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Button>
+        <Button Background="#FFB61DA8" Command="{Binding Doctors}" Grid.Column="2" Grid.Row="1" Height="Auto" Margin="8,4"  Padding="0" BorderBrush="#FFF0E4CC" Grid.ColumnSpan="1" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Список докторов" FontSize="20
+                           " HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Button>
+        <Button Background="#FFB61DA8" Command="{Binding Nurces}" Grid.Column="3" Grid.Row="1" Height="Auto" Margin="8,4"  Padding="0" BorderBrush="#FFF0E4CC" Grid.ColumnSpan="1" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Список медсестер" FontSize="20
+                           " HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Button>
+        <Button Command="{Binding Schedule}" Grid.Column="2" Grid.Row="2" Height="Auto" Margin="8,4"  Padding="0" BorderBrush="#FFF0E4CC" Grid.ColumnSpan="1" Background="#FF004C78" >
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Расписание врачей" FontSize="20
+                           " HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+            </StackPanel>
+        </Button>
+        <Button Command="{Binding ProcSchedule}" Grid.Column="1" Grid.Row="2" Height="Auto" Margin="8,4"  Padding="0" BorderBrush="#FFF0E4CC" Grid.ColumnSpan="1" Background="#FF004C78">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Раписание процедурных" FontSize="20
+                           " HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Button>
+        <Button Command="{Binding Card}" Grid.Column="0" Grid.Row="1" Height="Auto" Margin="8,4" Padding="0" BorderBrush="#FFF0E4CC" Grid.ColumnSpan="1" Background="#FFB61DA8" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Просмотр карты" FontSize="20
+                           " HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Button>
+        <Button Background="#FF00C161" Command="{Binding Registration}" Grid.Column="1" Grid.Row="3" Height="Auto" Margin="8,4"  Padding="0" BorderBrush="#FFF0E4CC" Grid.ColumnSpan="1" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Запись на прием" FontSize="20
+                           " HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Button>
+            <Button Command="{Binding RegistrationProc}" Grid.Column="0" Grid.Row="3" Height="Auto" Margin="8,4"  Padding="0" BorderBrush="#FFF0E4CC" Grid.ColumnSpan="1" Background="#FF00C161" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Запись на процедуру" FontSize="20
+                           " HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Button>
+            <Button Command="{Binding Exit}" Grid.Column="3" Grid.Row="3" Height="Auto" Margin="8,4" Padding="0" BorderBrush="#FFF0E4CC" Grid.ColumnSpan="1" Background="#FFD65C56" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Выход из аккаунта" FontSize="20
+                           " HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Button>
+
+        <Button Command="{Binding Test}" Grid.Column="0" Grid.Row="2" Height="Auto" Margin="8,4"  Padding="0" BorderBrush="#FFF0E4CC" Grid.ColumnSpan="1" Background="#FF004C78" >
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Замена врача" FontSize="20
+                           " HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+            </StackPanel>
+        </Button>
+        <Rectangle Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="1" Fill="#FF02AE87"/>
+        <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="1" Text="Регистратура" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" Foreground="White" FontWeight="Bold"/>
+    </Grid>
+</Window>
